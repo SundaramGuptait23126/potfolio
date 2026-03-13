@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaShieldAlt, FaGraduationCap } from 'react-icons/fa';
+import { FaGraduationCap } from 'react-icons/fa';
+import paloAltoLogo from '../assets/palo-alto-logo.webp';
 
 const Education = () => {
     return (
@@ -12,12 +13,19 @@ const Education = () => {
                         <div className="line"></div>
                     </div>
                     <div className="timeline">
-                        <a href="/Network_Security_Fundamentals_Student_Certificate.pdf" target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <div className="timeline-item glass-card" style={{ cursor: 'pointer' }}>
-                                <div className="timeline-icon"><FaShieldAlt /></div>
+                        <a href="/Network_Security_Fundamentals_Student_Certificate.pdf" target="_blank" rel="noreferrer" className="cert-link">
+                            <div className="timeline-item glass-card cert-card">
+                                <div className="timeline-icon" style={{ overflow: 'hidden', padding: '5px', backgroundColor: 'white' }}>
+                                    <img 
+                                        src={paloAltoLogo} 
+                                        alt="Palo Alto Logo" 
+                                        style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
+                                    />
+                                </div>
                                 <div className="timeline-content">
                                     <h3>Palo Alto Cybersecurity Foundation</h3>
                                     <p className="timeline-issuer">Palo Alto Networks</p>
+                                    <span className="cert-badge">View Certificate ↗</span>
                                 </div>
                             </div>
                         </a>

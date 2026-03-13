@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaBriefcase } from 'react-icons/fa';
+import drdoLogo from '../assets/drdo-logo.webp';
 
 const Experience = () => {
     return (
@@ -10,11 +11,11 @@ const Experience = () => {
                     <div className="line"></div>
                 </div>
                 <div className="timeline" style={{ maxWidth: '800px', margin: '0 auto' }}>
-                    <a href="/drdo_internship.pdf" target="_blank" rel="noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <div className="timeline-item glass-card" style={{ cursor: 'pointer' }}>
+                    <a href="/drdo_internship.pdf" target="_blank" rel="noreferrer" className="cert-link">
+                        <div className="timeline-item glass-card cert-card">
                             <div className="timeline-icon" style={{ overflow: 'hidden', padding: '5px', backgroundColor: 'white' }}>
                                 <img 
-                                    src="https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Defence_Research_and_Development_Organisation_Logo.png/220px-Defence_Research_and_Development_Organisation_Logo.png" 
+                                    src={drdoLogo} 
                                     alt="DRDO Logo" 
                                     style={{ width: '100%', height: '100%', objectFit: 'contain' }} 
                                 />

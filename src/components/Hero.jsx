@@ -1,11 +1,12 @@
 import React from 'react';
+import profileImg from '../assets/profile.jpg';
 
 const Hero = () => {
     return (
         <header id="hero" className="section hero-section">
             <div className="hero-content">
                 <div className="profile-img-container" data-aos="zoom-in" data-aos-duration="1000">
-                    <img src="/profile.jpg" alt="Sundaram Gupta" className="profile-img" />
+                    <img src={profileImg} alt="Sundaram Gupta" className="profile-img" />
                     <div className="profile-glow"></div>
                 </div>
                 <p className="greeting" data-aos="fade-down" data-aos-delay="100">Hello, I'm</p>

@@ -723,6 +723,38 @@ ul {
     font-size: 0.95rem;
 }
 
+/* Certificate Badge Styles */
+.cert-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.cert-card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.cert-badge {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(0, 210, 255, 0.1);
+    color: var(--accent-primary);
+    border: 1px solid rgba(0, 210, 255, 0.2);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: var(--transition-normal);
+}
+
+.cert-card:hover .cert-badge {
+    background: var(--accent-primary);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.4);
+}
+
 /* Contact Section */
 .contact-wrapper {
     display: grid;
