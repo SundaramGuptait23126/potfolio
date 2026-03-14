@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FaCode, FaTerminal, FaServer, FaUserSecret, FaSearchLocation, FaMicrochip, FaCamera, FaTools } from 'react-icons/fa';
-import { SiJavascript, SiNodedotjs, SiLinux } from 'react-icons/si';
+import { SiJavascript, SiNodedotjs, SiLinux, SiExpress, SiMongodb, SiReact } from 'react-icons/si';
 
 const Skills = () => {
+    const gridRef = useRef(null);
+
+    const handleMouseMove = (e) => {
+        if (!gridRef.current) return;
+        
+        const cards = gridRef.current.getElementsByClassName('skill-card');
+        for (const card of cards) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            card.style.setProperty('--mouse-x', `${x}px`);
+            card.style.setProperty('--mouse-y', `${y}px`);
+        }
+    };
+
     return (
         <section id="skills" className="section skills-section">
             <div className="container">
@@ -10,7 +26,7 @@ const Skills = () => {
                     <h2>Technical Skills</h2>
                     <div className="line"></div>
                 </div>
-                <div className="skills-grid">
+                <div className="skills-grid" ref={gridRef} onMouseMove={handleMouseMove}>
 
                     {/* Programming */}
                     <div className="skill-card glass-card" data-aos="fade-up" data-aos-delay="100">
@@ -25,9 +41,12 @@ const Skills = () => {
                     {/* Backend */}
                     <div className="skill-card glass-card" data-aos="fade-up" data-aos-delay="200">
                         <div className="skill-icon"><FaServer /></div>
-                        <h3>Backend</h3>
+                        <h3>Backend (MERN)</h3>
                         <ul className="skill-list">
-                            <li><SiNodedotjs /> MERN Stack</li>
+                            <li><SiMongodb /> MongoDB</li>
+                            <li><SiExpress /> Express.js</li>
+                            <li><SiReact /> React</li>
+                            <li><SiNodedotjs /> Node.js</li>
                         </ul>
                     </div>
 
